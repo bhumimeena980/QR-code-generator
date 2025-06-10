@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Advanced QR Code Generator</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+</head>
+<body>
+  <h2>Advanced QR Code Generator</h2>
+
+  <label>Text or URL:
+    <input type="text" id="qr-text" value="https://example.com" />
+  </label><br />
+
+  <label>Foreground Color:
+    <input type="color" id="fg-color" value="#000000" />
+  </label><br />
+
+  <label>Background Color:
+    <input type="color" id="bg-color" value="#ffffff" />
+  </label><br />
+
+  <label>Logo (PNG or SVG):
+    <input type="file" id="logo-input" accept="image/*" />
+  </label><br />
+
+  <button onclick="generateQRCode()">Generate QR Code</button>
+  <button onclick="downloadQRCode()">Download QR</button>
+
+  <div id="qr-container">
+    <div id="qrcode"></div>
+    <img id="qr-logo" class="logo" style="display: none;" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
